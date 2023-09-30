@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  background-color: gold;
+  color: black;
+  padding: 10px;
+}
+
+.mahasiswa-table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: gold;
+}
+
+.mahasiswa-table th,
+.mahasiswa-table td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: left;
+}
+
+.mahasiswa-table th {
+  color: black;
+}
+
+.mahasiswa-table tr:nth-child(even) {
+  background-color: gold;
+}
