@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Penjumlahan Bilangan</title>
+  </head>
+  <body>
+    <h1>Penjumlahan Bilangan</h1>
+
+    <input
+      type="number"
+      id="bilangan1"
+      placeholder="Masukkan bilangan pertama"
+    />
+    <input type="number" id="bilangan2" placeholder="Masukkan bilangan kedua" />
+
+    <p>Hasil Penjumlahan: <span id="hasil"></span></p>
+
+    <button onclick="hitungPenjumlahan()">Jumlahkan</button>
+    <button onclick="kosongkanInput()">Ulang</button>
+
+    <script>
+      function hitungPenjumlahan() {
+        var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+        var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+        if (!isNaN(bilangan1) && !isNaN(bilangan2)) {
+          var hasil = bilangan1 + bilangan2;
+          document.getElementById("hasil").textContent = hasil;
+          alert("Hasil penjumlahan: " + hasil);
+        } else {
+          alert("Masukkan kedua bilangan terlebih dahulu.");
+        }
+      }
+
+      function kosongkanInput() {
+        document.getElementById("bilangan1").value = "";
+        document.getElementById("bilangan2").value = "";
+        document.getElementById("hasil").textContent = "";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- #file html -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Penjumlahan Bilangan</title>
+  </head>
+  <body>
+    <h1>Penjumlahan Bilangan</h1>
+
+    <input
+      type="number"
+      id="bilangan1"
+      placeholder="Masukkan bilangan pertama"
+    />
+    <input type="number" id="bilangan2" placeholder="Masukkan bilangan kedua" />
+
+    <p>Hasil Penjumlahan: <span id="hasil"></span></p>
+
+    <button id="jumlahkanButton">Jumlahkan</button>
+    <button id="ulangButton">Ulang</button>
+
+    <script src="script.js"></script>
+  </body>
+</html> -->
+
+<!-- file JS
+document
+  .getElementById("jumlahkanButton")
+  .addEventListener("click", function () {
+    var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+    var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+    if (!isNaN(bilangan1) && !isNaN(bilangan2)) {
+      var hasil = bilangan1 + bilangan2;
+      document.getElementById("hasil").textContent = hasil;
+      alert("Hasil penjumlahan: " + hasil);
+    } else {
+      alert("Masukkan kedua bilangan terlebih dahulu.");
+    }
+  });
+
+document.getElementById("ulangButton").addEventListener("click", function () {
+  document.getElementById("bilangan1").value = "";
+  document.getElementById("bilangan2").value = "";
+  document.getElementById("hasil").textContent = "";
+}); -->
